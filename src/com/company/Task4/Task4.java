@@ -9,9 +9,9 @@ public class Task4 {
                 .thenComparing(new PersonFirstNameComparator())
                 .thenComparing(new PersonLastNameComparator());
         final var persons = new TreeSet<>(personComparator);
-        List.of(new Person(45, "Will", "Smith"),
-                new Person(34, "Lionel", "Messi"),
-                new Person(24, "Tadon", "Smith"));
+        persons.add(new Person(33, "Will", "Smith"));
+        persons.add(new Person(34, "Lionel", "Messi"));
+        persons.add(new Person(24, "Jadon", "Smith"));
 
         for (Person person : persons){
             System.out.println(person.getAge() + " " + person.getFirstName() + " " + person.getLastName());
