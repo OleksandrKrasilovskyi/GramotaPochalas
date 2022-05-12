@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.List;
 
 public class Task1 {
+   public static void main(String[] args) {
+               
        final var strings = List.of("Amazon", "Merge", "Kamaz", "Margo", "Amur", "Moroz", "Carrot");
 
         strings.stream()
