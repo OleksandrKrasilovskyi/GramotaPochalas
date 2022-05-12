@@ -13,9 +13,9 @@ public class Task4 {
         persons.add(new Person(34, "Lionel", "Messi"));
         persons.add(new Person(24, "Jadon", "Smith"));
 
-        for (Person person : persons){
-            System.out.println(person.getAge() + " " + person.getFirstName() + " " + person.getLastName());
-        }
+        persons.stream()
+                .map(person -> person.getAge() + " " + person.getFirstName() + " " + person.getLastName())
+                .forEach(System.out::println);
     }
 }
 
@@ -53,7 +53,7 @@ class Person {
     }
 }
 
-class PersonAgeComparator implements Comparator<Person>{
+class PersonAgeComparator implements Comparator<Person> {
 
     @Override
     public int compare(Person o1, Person o2) {
@@ -61,7 +61,7 @@ class PersonAgeComparator implements Comparator<Person>{
     }
 }
 
-class PersonFirstNameComparator implements Comparator<Person>{
+class PersonFirstNameComparator implements Comparator<Person> {
 
     @Override
     public int compare(Person o1, Person o2) {
@@ -69,7 +69,7 @@ class PersonFirstNameComparator implements Comparator<Person>{
     }
 }
 
-class PersonLastNameComparator implements Comparator<Person>{
+class PersonLastNameComparator implements Comparator<Person> {
 
     @Override
     public int compare(Person o1, Person o2) {
